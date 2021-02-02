@@ -1,0 +1,18 @@
+--- 
+- 
+  gather_facts: false
+  hosts: windows
+  name: "Windows Security Updates"
+  tasks: 
+    - 
+      async: 180
+      become: true
+      become_method: runas
+      become_user: SYSTEM
+      category_names: 
+        - SecurityUpdates
+      name: "Search for Windows updates asynchronously"
+      poll: 10
+      register: updates_to_install
+      state: searched
+      win_updates: ~

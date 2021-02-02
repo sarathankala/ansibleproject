@@ -1,0 +1,9 @@
+
+---
+- 
+    name: "Copy index.html to wwwroot"
+    win_copy: 
+      src: files/index.html
+      dest: C:\inetpub\wwwroot\index.html
+      force: yes
+

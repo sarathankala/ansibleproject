@@ -1,0 +1,8 @@
+---
+   - name: Restarting IIS Service
+
+     win_service:
+
+       name: w3svc
+
+       state: restarted

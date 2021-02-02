@@ -1,0 +1,9 @@
+---
+# This playbook uses the win_ping module to test connectivity to Windows hosts
+- name: Ping 
+  hosts: windows
+  gather_facts: yes
+
+  tasks:
+  - name: ping
+    win_ping:

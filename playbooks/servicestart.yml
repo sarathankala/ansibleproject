@@ -1,0 +1,11 @@
+--- 
+- 
+  hosts: windows
+  tasks: 
+    - 
+      name: "Start service Spooler"
+      win_service: 
+        name: spooler
+        state: started
+        when: "win_service == \"stopped\""
+

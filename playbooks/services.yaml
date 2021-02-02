@@ -1,0 +1,20 @@
+---
+- hosts: windows 
+
+  tasks: 
+
+   - name: Stop service Spooler
+
+     win_service:
+
+       name: spooler
+
+       state: stopped
+
+   - name: Start service Spooler
+
+     win_service:
+
+       name: spooler
+
+       state: started

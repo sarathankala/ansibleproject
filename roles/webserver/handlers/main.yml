@@ -1,0 +1,4 @@
+
+# handlers file for /etc/ansible/roles/webserver
+    - name: restart IIS
+      win_shell: '& {iisreset}'
